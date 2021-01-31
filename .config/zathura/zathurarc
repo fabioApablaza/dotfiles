@@ -1,4 +1,4 @@
-et font                        "Fira Mono 8"
+set font                        "Fira Mono 8"
 set default-bg                  "#262626" #00
 set default-fg                  "#ebdbb2" #01
 
