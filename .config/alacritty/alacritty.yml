@@ -1,3 +1,15 @@
+ window:
+   decorations: "none"
+     #     padding:
+     #       x: 2
+
+       #     startup_mode: Windowed
+   
+
+ background_opacity: 1.0
+       #   shell:
+     #program: /bin/zsh
+
 # Colors (Gruvbox dark)
  colors:
    # Default colors
@@ -29,17 +41,4 @@
      cyan:    '#8ec07c'
      white:   '#ebdbb2'
 
-   window:
-     #     decorations: "none"
-     #     padding:
-     #       x: 2
 
-       #     startup_mode: Windowed
-   
-
-       #Para que la terminal sea transparente y se pueda ver el fondo de pantalla
-       #pero como el color de fondo de la terminal que actualmente esta configurado
-       #es muy oscuro poco se puede ver y no sirve de nada:
-       # background_opacity: 0.95
-       #   shell:
-     #program: /bin/zsh
