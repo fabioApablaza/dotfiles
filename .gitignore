@@ -3,8 +3,6 @@
 # No se ignoran los siguientes archivos:
 !.gitignore
 !README.md
-#!README.es.md
-#!.screenshots
 !.bashrc
 #!.spectrwm.conf
 #!.baraction.sh
