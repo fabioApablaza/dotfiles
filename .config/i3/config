@@ -249,3 +249,5 @@ bindsym $mod+p exec xfce4-screenshooter
 #Polybar Launch Script
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+#Gestor de portapapeles
+exec --no-startup-id clipit

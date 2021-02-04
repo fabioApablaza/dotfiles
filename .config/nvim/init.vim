@@ -40,11 +40,19 @@ let g:airline#extensions#tabline#enabled = 1
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
 filetype plugin on
 " OPTIONAL: This enables automatic indentation as you type.
-filetype indent on
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
 "Directorio donde se encuentran las plantillas
 let g:Tex_CustomTemplateDirectory = '~/.config/nvim/templates/'
+
+"Configuración para que vim-latex compile y exporte en formato pdf
+let g:Tex_CompileRule_pdf  = 'pdf'
+"let g:Tex_FormatDependency_dvi = 'dvi,ps,pdf'
+let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+"Definiendo a zathura como mi visualizador de pdf
+let g:Tex_ViewRule_pdf = 'zathura'
+
+map <Leader>ññ :!pdflatex %
+
