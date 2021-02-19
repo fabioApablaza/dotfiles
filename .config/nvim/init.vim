@@ -11,7 +11,9 @@ Plug 'rafi/awesome-vim-colorschemes'
 
 Plug 'gruvbox-community/gruvbox'
 
-"Plug 'powerline/powerline'
+"Plug 'powerline/powerline"'
+
+Plug 'ThePrimeagen/vim-be-good'
 
 Plug 'vim-airline/vim-airline'
 
@@ -25,14 +27,19 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'preservim/nerdtree'
 
+Plug 'liuchengxu/graphviz.vim'
+
+Plug 'jceb/vim-orgmode'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
 set number "Numeración de cada linea de codigo
 set relativenumber "Permite ver a cuantas lineas de codigo se encuentran otras lineas desde la que estas parada
 set nu "Resalta el número de linea actual
-colorscheme gruvbox
-
+colorscheme gruvbox 
+"Transparencia en el fondo
+hi Normal guibg=NONE ctermbg=NONE
 "Configuracion de Airline
 let g:airline#extensions#tabline#enabled = 1
 
@@ -54,5 +61,15 @@ let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
 "Definiendo a zathura como mi visualizador de pdf
 let g:Tex_ViewRule_pdf = 'zathura'
 
+
 map <Leader>ññ :!pdflatex %
 
+"Cada vez que creo un archivo html se genera la plantilla
+:autocmd BufNewFile *.html 0r ~/.config/nvim/templates/html.tpl
+
+"Graphviz
+"Compila .dot a png
+let g:graphviz_output_format = 'png'
+
+"" Open Graphviz results with sxiv
+let g:graphviz_viewer = 'sxiv'

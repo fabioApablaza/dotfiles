@@ -6,7 +6,7 @@
        #     startup_mode: Windowed
    
 
- background_opacity: 1.0
+ background_opacity: 0.85
        #   shell:
      #program: /bin/zsh
 
@@ -41,4 +41,21 @@
      cyan:    '#8ec07c'
      white:   '#ebdbb2'
 
-
+     # font:
+     #  normal:
+     #    family: monospace
+     #    style: Regular
+     #
+     #  bold:
+     #    family: monospace
+     #    style: Bold
+     #
+     #  italic:
+     #    family: monospace
+     #    style: Italic
+     #
+     #  bold_italic:
+     #    family: monospace
+     #    style: Bold Italic
+     #
+     #  size: 11
