@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango: DejaVuSansMono Nerd Font 8
 #Ocultar los titulos de la terminal
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
@@ -52,7 +52,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -p Ejecutar: -l 5 -nb "#1d2021" -nf "#928374" -sb "#3c3836" -sf "#98971a" -fn Hack 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec rofi -modi drun,run -show drun
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -115,6 +115,9 @@ bindsym $mod+a focus parent
 
 # Ejecuciòn de Brave
 bindsym $mod+b exec brave
+
+# Ejecución de Rofi(Ejecuta programas)
+bindsym $mod+c exec rofi -show run
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -254,7 +257,7 @@ mode "$mode_system" {
 bindsym $mod+p exec xfce4-screenshooter
 
 #Polybar Launch Script
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh --cuts
 
 #Gestor de portapapeles
 exec --no-startup-id clipit

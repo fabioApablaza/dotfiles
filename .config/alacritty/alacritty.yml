@@ -6,31 +6,42 @@
        #     startup_mode: Windowed
    
 
- background_opacity: 0.85
+   #background_opacity: 0.85
+ background_opacity: 1
        #   shell:
      #program: /bin/zsh
 
 # Colors (Gruvbox dark)
  colors:
-   # Default colors
    primary:
-     # hard contrast: background = '#1d2021'
-     background: '#282828'
-     # soft contrast: background = '#32302f'
-     foreground: '#ebdbb2'
-
-   # Normal colors
-   normal:
-     black:   '#282828'
-     red:     '#cc241d'
-     green:   '#98971a'
-     yellow:  '#d79921'
-     blue:    '#458588'
-     magenta: '#b16286'
-     cyan:    '#689d6a'
-     white:   '#a89984'
-
-   # Bright colors
+    # hard contrast background - '#1d2021'
+     background:        &gruvbox_dark_bg '#282828'
+    # soft contrast background - '#32302f'
+     foreground:        '#fbf1c7'
+     bright_foreground: '#f9f5d7'
+     dim_foreground:    '#f2e5bc'
+   cursor:
+     text:   CellBackground
+     cursor: CellForeground
+   vi_mode_cursor:
+     text:   CellBackground
+     cursor: CellForeground
+  # search:
+  #   matches:
+  #     foreground: '#000000'
+  #     background: '#ffffff'
+  #   focused_match:
+  #    foreground: CellBackground
+  #    background: CellForeground
+  #   bar:
+  #     background: ''
+  #     foreground: ''
+  # line_indicator:
+  #   foreground: None
+  #   background: None     
+   selection:
+     text:       CellBackground
+     background: CellForeground
    bright:
      black:   '#928374'
      red:     '#fb4934'
@@ -40,22 +51,83 @@
      magenta: '#d3869b'
      cyan:    '#8ec07c'
      white:   '#ebdbb2'
+   normal:
+     black:   *gruvbox_dark_bg
+     red:     '#cc241d'
+     green:   '#98971a'
+     yellow:  '#d79921'
+     blue:    '#458588'
+     magenta: '#b16286'
+     cyan:    '#689d6a'
+     white:   '#a89984'
+   dim:
+     black:   '#32302f'
+     red:     '#9d0006'
+     green:   '#79740e'
+     yellow:  '#b57614'
+     blue:    '#076678'
+     magenta: '#8f3f71'
+     cyan:    '#427b58'
+     white:   '#928374'
+   # indexed_colors: []# Colors (Gruvbox Material Dark Medium)
+ # colors:
+ #   primary:
+ #    background: '0x282828'
+ #    foreground: '0xdfbf8e'
 
-     # font:
-     #  normal:
-     #    family: monospace
-     #    style: Regular
-     #
-     #  bold:
-     #    family: monospace
-     #    style: Bold
-     #
-     #  italic:
-     #    family: monospace
-     #    style: Italic
-     #
-     #  bold_italic:
-     #    family: monospace
-     #    style: Bold Italic
-     #
-     #  size: 11
+ #   normal:
+ #    black:   '0x665c54'
+ #    red:     '0xea6962'
+ #    green:   '0xa9b665'
+ #    yellow:  '0xe78a4e'
+ #    blue:    '0x7daea3'
+ #    magenta: '0xd3869b'
+ #    cyan:    '0x89b482'
+ #    white:   '0xdfbf8e'
+
+ #   bright:
+ #    black:   '0x928374'
+ #    red:     '0xea6962'
+ #    green:   '0xa9b665'
+ #    yellow:  '0xe3a84e'
+ #    blue:    '0x7daea3'
+ #    magenta: '0xd3869b'
+ #    cyan:    '0x89b482'
+ #    white:   '0xdfbf8e'
+   font:
+
+     size: 15
+
+     normal:
+        family: DejaVuSansMono Nerd Font
+        style: Medium
+     
+     bold:
+        family: DejaVuSansMono Nerd Font
+        style: Bold
+     
+     italic:
+        family: DejaVuSansMono Nerd Font
+        style: Medium
+    
+     bold_italic:
+        family: DejaVuSansMono Nerd Font
+        style: Bold Italic
+            
+   shell:
+      program: /usr/bin/tmux
+      args:
+        - new
+        - -A
+        - -s main
+          #        - "tmux attach || tmux"
+
+   cursor:
+# Cursor style
+#   #
+#     # Values for `style`:
+#       #   - ▇ Block
+#         #   - _ Underline
+#           #   - | Beam
+      style: Underline
+          
